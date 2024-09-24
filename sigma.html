@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="unit1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lekcieplocha">
+        <div class="lekcia-name">
+            <h2>LEKCIE</h2>
+        </div>
+
+        <div class="grid-container">
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia1.json'), audio.play()">Lekcia 1</button>
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia2.json'), audio.play()">Lekcia 2</button>
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia3.json'), audio.play()">Lekcia 3</button>
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia4.json'), audio.play()">Lekcia 4</button>
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia5.json'), audio.play()">Lekcia 5</button>
+            <button>Lekcia 6</button>
+            <button>Lekcia 7</button>
+            <button>Lekcia 8</button>
+            <button>Lekcia 9</button>
+            <button>Lekcia 10</button>
+            <button onclick="vymazatPlochu(), zobrazitStlpce(), dostatLekciu('lekcie/lekcia11.json'), audio.play()">Lekcia 11</button>
+            <button>Lekcia 12</button>
+            <button>Lekcia 13</button>
+            <button>Lekcia 14</button>
+            <button>Lekcia 15</button>
+            <button>Lekcia 16</button>
+            <button>Lekcia 17</button>
+            <button>Lekcia 18</button>
+            <button>Lekcia 19</button>
+            <button>Lekcia 20</button>
+        </div>
+    </div>
+
+    <div id="stlpecplocha">
+        <button type="button" onclick="vymazatPlochu(), zobrazitLekcie(), audio.play()" class="spatButton">Späť</button>
+        <div class="lekcia-name">
+            <h2 style="margin-top: 100px;">STLPEC</h2>
+        </div>
+
+        <div class="grid-container">
+            <button onclick="dostat(xd2, 0), audio.play()">Stĺpec 1</button>
+            <button onclick="dostat(xd2, 1), audio.play()">Stĺpec 2</button>
+            <button onclick="dostat(xd2, 2), audio.play()">Stĺpec 3</button>
+            <button onclick="dostat(xd2, 3), audio.play()">Stĺpec 4</button>
+            <button onclick="dostat(xd2, 4), audio.play()">Všetky</button>
+        </div>
+    </div>
+
+
+
+    <div id="hernaplocha">
+        <button type="button" onclick="vymazatPlochu(), zobrazitLekcie(), audio.play()" class="spatButton">Späť</button>
+        <h1 id="slovo"></h1>
+        <div class="buttons">
+            <button type="button" id="button1" onclick="poslat('button1')"></button>
+            <button type="button" id="button2" onclick="poslat('button2')"></button>
+        </div>
+        <h2 id='scorecounter' style="text-align: center; color: white;">0/10</h2>
+    </div>
+
+    <div id="konecplocha">
+        <h1 id="hotovotext">HOTOVO!</h1>
+        <h4 id="spravnetext">správne: </h4>
+        <h4 id="zletext">nesprávne: </h4>
+        <button type="button" onclick="exitButton(), audio.play()" class="spatButton">Späť</button>
+        <button type="button" onclick="retry(), audio.play()" class="spatButton">Retry</button>
+    </div>
+    <script src="smegma.js"></script>
+
+    <div id="errorplocha" style="display: none;">
+        <button type="button" onclick="exitButton(), audio.play()" class="spatButton">Exit</button>
+        <p style="color: white; margin-top: 50px;">Nastal nejaký problém, skús si skontrolovať pripojenie...</p>
+    </div>
+</body>
+</html>
