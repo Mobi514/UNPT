@@ -57,8 +57,12 @@ async function poslat(buttonId){
     }
     scorenumber ++;
     refreshscore();
+    document.getElementById('button1').disabled = true;
+    document.getElementById('button2').disabled = true;
     await wait(1000);
     InputButton.style.backgroundColor = 'transparent';
+    document.getElementById('button1').disabled = false;
+    document.getElementById('button2').disabled = false;
     if(scorenumber >= Math.floor(dlzkaklucov * 0.5)){
         endgame();
     }
